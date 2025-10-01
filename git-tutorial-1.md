@@ -1,7 +1,10 @@
 ## Installing Git
 ### Windows
 - The simplest and easiest way to install Git on windows is through the official Git website: https://git-scm.com/downloads
-- Alternatively, if you are more comfortable using the Windows terminal you can run the following command:
+- Alternatively, if you are more comfortable using the Windows terminal:
+	1. Press the windows key
+	2. Type `cmd` and press `Enter`
+	3. The terminal window will open and you can then run the following command:
 ```PowerShell
   winget install -e --id Git.Git
   ```
@@ -13,14 +16,22 @@
 apt-get install git
 ```
 ### MacOS
-- If you are using MacOS then you can install Git through the following command:
+- If you are using MacOS then you can install Git by:
+	1. Pressing `Command/cmd` + `Space`
+	2. Typing `terminal` and pressing enter.
+	3. Then when the terminal window appears, type:
 ```zsh
 brew install git
 ```
+- If you get a `homebrew not found` or `homebrew not installed` error you can run the following command to install it:
+```zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+- (don't worry if you don't know what it means)
 
 ## Creating a Git repository
 - A Git repository is a directory that has its files tracked by Git.
-- We can create a repository with the following commands:
+- We can create a repository with the following commands and all the following commands are run inside the terminal:
 ```zsh
 
 # create a directory we want to have our repository in
