@@ -8,12 +8,17 @@
 ```PowerShell
   winget install -e --id Git.Git
   ```
+- If you installed Git by downloading the `.exe` file from the website, follow the installation instructions, and in the Git installer, keep all the installation options default. (Just press next for everything). Don't change any of the options.
+- Once Git is installed, the rest of the commands in this tutorial will be run in the 'Git Bash' program.
+- You can run this program by:
+	1. Pressing the windows key
+	2. Typing `Git Bash` and pressing `Enter` or by clicking on the 'Git Bash' program.
 ### Linux
 - If you are using Linux you can install Git through your Operating Systems' package manager.
 - Download the `git` package.
 - For example, on Debian/Ubuntu based systems:
 ```zsh
-apt-get install git
+sudo apt install git
 ```
 ### MacOS
 - If you are using MacOS then you can install Git by:
@@ -29,6 +34,14 @@ brew install git
 ```
 - (don't worry if you don't know what it means)
 
+## Configuring Git
+- After installing Git, we must configure it a little. For now all we need to provide, is a name, and an email. This is so git knows who the 'author' of our operations is. This is useful later down the line if you are working with a team, as we have to know who does what to our repository.
+- We can set our name and email in our git config (configuration) with the following commands. Replace with your email and your name.
+- The `--global` just means set this option for all of your git projects.
+```zsh
+git config --global user.email "example@gmail.com"
+git config --global user.name "John Doe"
+```
 ## Creating a Git repository
 - A Git repository is a directory that has its files tracked by Git.
 - We can create a repository with the following commands and all the following commands are run inside the terminal:
@@ -123,7 +136,7 @@ index 980a0d5..faffb51 100644
 - We didn't type `+` so where did this come from?
 	1. This is Git telling us that the difference between the version it has tracked and the state it is right now, is the addition of the line `Some more text`.
 	2. Git works on tracking a line by line difference so it relays added lines with `+` and removed lines with `-`. If we change a line it treats it as us removing the line, then adding a new line with the changes we made.
-- If we now check the status of our repository:
+- If we now check the status of our repository using `git status`:
 ```zsh
 On branch master
 
