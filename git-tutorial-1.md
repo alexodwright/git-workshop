@@ -112,6 +112,7 @@ Changes to be committed:
 	- However, when we added our file to be tracked by Git. We are only telling Git to track the file in it's current state when we run the command.
 
 ## Git `diff`
+- The `git diff` command allows us to see the difference between the staged versions of our files (the snapshots) and the working tree (the current state of the files, possibly newer than the staged versions if we haven't run `git add` yet)
 - For instance, if we were to change (add, modify, or remove) text from our file. In this case add:
 ```zsh
 echo "Some more text" >> myFile.txt
