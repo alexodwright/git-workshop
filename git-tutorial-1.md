@@ -32,7 +32,7 @@ brew install git
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-- (don't worry if you don't know what it means)
+- (Don't worry if you don't know what it means)
 
 ## Configuring Git
 - After installing Git, we must configure it a little. For now all we need to provide, is a name, and an email. This is so git knows who the 'author' of our operations is. This is useful later down the line if you are working with a team, as we have to know who does what to our repository.
@@ -45,27 +45,30 @@ git config --global user.name "John Doe"
 ## Creating a Git repository
 - A Git repository is a directory that has its files tracked by Git.
 - We can create a repository with the following commands and all the following commands are run inside the terminal:
+
+- Create a directory we want to have our repository in
 ```zsh
-
-# create a directory we want to have our repository in
 mkdir -p my-git-repository
-
-# change the current working directory into our new directory
-cd my-git-repository
-
-# now we run the 'git init' command to intialise a git repository in the directory we are in
-git init
-
-# now if we list all the directories (files/folders) in the directory we are in
-ls
-
-# we notice that the directory appears empty
-# however there is a hidden `.git` file that tracks everything git does to our directory
-# we can find this file by running
-ls -a
-
-# (this means list all the directories, even hidden ones like `.git`)
 ```
+- Change the current working directory into our new directory
+```zsh
+cd my-git-repository
+```
+- Now we run the 'git init' command to intialise a git repository in the directory we are in
+```zsh
+git init
+```
+- Now if we list all the directories (files/folders) in the directory we are in
+```zsh
+ls
+```
+- We notice that the directory appears empty
+- However there is a hidden `.git` file that tracks everything git does to our directory
+- We can find this file by running
+```zsh
+ls -a
+```
+- (This means list all the directories, even hidden ones like `.git`)
 
 ## Adding files to be tracked by Git
 - 'Tracking' a file in Git means that git notices the changes made to the file and keeps track of them.
